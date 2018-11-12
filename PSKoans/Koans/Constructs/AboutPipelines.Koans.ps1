@@ -1,5 +1,5 @@
 using module PSKoans
-[Koan()]
+[Koan(Position = 304)]
 param()
 <#
     Pipelines
@@ -68,5 +68,45 @@ param()
                 <Command2:end{}>
 
             <Total Output:{^^1, ^^2, ^^3}>
-
 #>
+
+Describe 'The PowerShell Pipeline' {
+
+    Context 'Working with the Pipeline' {
+
+        It 'can chain sequences of commands' {
+
+        }
+
+        It 'can pass single items' {
+
+        }
+
+        It 'can pass multiple items' {
+
+        }
+
+        It 'can pass items directly' {
+
+        }
+
+        It 'can pass items as a property' {
+
+        }
+
+        It 'can pass properties to specific parameters' {
+
+        }
+
+        It 'is controlled by the cmdlets and functions' {
+
+        }
+    }
+
+    Context 'Designing for the Pipeline' {
+
+        It 'requires specifically implemented code patterns' {
+
+        }
+    }
+}
