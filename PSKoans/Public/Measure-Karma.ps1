@@ -98,14 +98,14 @@ function Measure-Karma {
             Write-Verbose 'Sorting koans...'
             $SortedKoanList = Get-ChildItem -Path $env:PSKoans_Folder -Recurse -Filter '*.Koans.ps1' |
                 Where-Object {
-                -not $PSBoundParameters.ContainsKey('Topic') -or
-                $_.BaseName -replace '\.Koans$' -in $Topic
-            } |
-                Get-Command {$_.FullName} |
-                Where-Object {$_.ScriptBlock.Attributes.TypeID -match 'KoanAttribute'} |
+                    -not $PSBoundParameters.ContainsKey('Topic') -or
+                    $_.BaseName -replace '\.Koans$' -in $Topic
+                } |
+                Get-Command { $_.FullName } |
+                Where-Object { $_.ScriptBlock.Attributes.TypeID -match 'KoanAttribute' } |
                 Sort-Object {
-                $_.ScriptBlock.Attributes.Where( {$_.TypeID -match 'KoanAttribute'}).Position
-            }
+                    $_.ScriptBlock.Attributes.Where{ $_.TypeID -match 'KoanAttribute' }.Position
+                }
 
             Write-Verbose 'Counting koans...'
             $TotalKoans = $SortedKoanList | Measure-Koan
