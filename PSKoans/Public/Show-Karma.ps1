@@ -1,6 +1,6 @@
 function Show-Karma {
     [CmdletBinding(DefaultParameterSetName = 'Default',
-        HelpUri = 'https://github.com/vexx32/PSKoans/tree/master/docs/Show-Karma.md')]
+        HelpUri = 'https://github.com/vexx32/PSKoans/tree/main/docs/Show-Karma.md')]
     [OutputType([void])]
     [Alias('Invoke-PSKoans', 'Test-Koans', 'Get-Enlightenment', 'Meditate', 'Clear-Path', 'Measure-Karma')]
     param(
@@ -117,7 +117,7 @@ function Show-Karma {
             }
 
             if ($Editor -and (Get-Command -Name $Editor -ErrorAction SilentlyContinue)) {
-                Start-Process -FilePath $Editor -ArgumentList $Arguments
+                Start-Process -FilePath $Editor -ArgumentList $Arguments -NoNewWindow
             }
             else {
                 Invoke-Item -Path $FilePath

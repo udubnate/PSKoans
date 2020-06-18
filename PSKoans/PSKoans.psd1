@@ -12,7 +12,7 @@
     RootModule            = 'PSKoans.psm1'
 
     # Version number of this module.
-    ModuleVersion         = '0.66.2'
+    ModuleVersion         = '0.67.0'
 
     # Supported PSEditions
     CompatiblePSEditions  = @('Desktop', 'Core')
@@ -53,8 +53,8 @@
     # Modules that must be imported into the global environment prior to importing this module
     RequiredModules       = @(
         @{
-            ModuleName    = 'Pester'
-            ModuleVersion = '4.3.1'
+            ModuleName      = 'Pester'
+            RequiredVersion = '4.10.1'
         }
     )
 
@@ -152,7 +152,7 @@
             )
 
             # A URL to the license for this module.
-            LicenseUri = 'https://github.com/vexx32/PSKoans/blob/master/LICENSE'
+            LicenseUri = 'https://github.com/vexx32/PSKoans/blob/main/LICENSE'
 
             # A URL to the main website for this project.
             ProjectUri = 'https://github.com/vexx32/PSKoans'
